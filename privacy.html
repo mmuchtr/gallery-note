@@ -2,36 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Gallery Note</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      color: #1a1a1a;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 16px;
+      line-height: 1.7;
+      color: #1c1c1e;
+      background: #fff;
+      padding: 48px 24px 80px;
+      max-width: 720px;
+      margin: 0 auto;
     }
-    h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
-    h2 { font-size: 19px; font-weight: 600; margin-top: 36px; margin-bottom: 8px; border-bottom: 1px solid #e5e5e5; padding-bottom: 6px; }
-    p { margin: 12px 0; }
-    ul { padding-left: 20px; margin: 8px 0; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    .meta { color: #6e6e73; font-size: 14px; margin-bottom: 36px; }
+    h2 { font-size: 18px; font-weight: 600; margin: 36px 0 10px; }
+    p { margin-bottom: 12px; }
+    ul { margin: 8px 0 12px 20px; }
     li { margin-bottom: 6px; }
-    a { color: #0066cc; }
-    .meta { color: #666; font-size: 14px; margin-bottom: 32px; }
-    .highlight { background: #f5f5f5; border-left: 3px solid #0066cc; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+    strong { font-weight: 600; }
+    a { color: #0071e3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight {
+      background: #f2f7ff;
+      border-left: 3px solid #0071e3;
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1e; color: #f5f5f7; }
+      .meta { color: #98989d; }
+      a { color: #2997ff; }
+      .highlight { background: #1d2535; border-left-color: #2997ff; }
+    }
   </style>
 </head>
 <body>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">App: <strong>Gallery Note</strong> &nbsp;·&nbsp; Developer: <strong>TLT Data</strong> &nbsp;·&nbsp; Last updated: June 2025</p>
+  <p class="meta">App: <strong>Gallery Note</strong> &middot; Developer: <strong>TLT Data</strong> &middot; Last updated: June 2026</p>
 
-  <div class="highlight">
-    Your privacy matters. Gallery Note is built with a privacy-first approach — your original files never leave your device, and we never sell your data or use it to train AI models.
-  </div>
+  <p>Your privacy matters. Gallery Note is built with a privacy-first approach — your original files never leave your device without your explicit permission, and we never sell your data or use it to train AI models.</p>
 
   <h2>1. Who We Are</h2>
   <p>Gallery Note is developed and operated by <strong>TLT Data</strong>. If you have any questions about this policy, you can contact us at <a href="mailto:support@tltdata.com">support@tltdata.com</a>.</p>
@@ -39,57 +54,74 @@
   <h2>2. What Data We Collect</h2>
   <p>We collect only what is necessary to provide the app's features:</p>
   <ul>
-    <li><strong>Files you process</strong> — when you use AI features (auto-tagging, OCR, speech-to-text, translation, color analysis), the relevant file or a portion of it is sent to our processing servers. Your original files are never stored permanently on our servers.</li>
-    <li><strong>Location data (EXIF)</strong> — location metadata embedded in your photos is stripped before any file is sent to external services.</li>
-    <li><strong>Notes and tags</strong> — stored locally on your device. Not sent to our servers unless required for a specific feature.</li>
+    <li><strong>Photo and image content</strong> — when you use AI features (auto-tagging, OCR, color analysis), the content of your photos is sent to our processing server and forwarded to a third-party AI service for analysis. Your original files are never stored permanently on our servers or by the AI service.</li>
+    <li><strong>Video and audio content</strong> — when you use Speech-to-Text or video OCR, the audio or video content is sent to our processing server and forwarded to a third-party AI service for transcription. Audio is deleted immediately after processing.</li>
+    <li><strong>Location data (EXIF)</strong> — location metadata embedded in your photos is stripped before any file is sent to external services. No GPS or location data is ever sent to AI services.</li>
+    <li><strong>Date and timestamp metadata</strong> — date and time information is removed from files before they are sent to AI services.</li>
+    <li><strong>Notes and tags</strong> — stored locally on your device and in your secure account. Not sent to AI services.</li>
     <li><strong>Usage and diagnostic data</strong> — anonymized crash reports and performance data to help us improve the app.</li>
     <li><strong>Purchase data</strong> — managed entirely by Apple via the App Store. We receive only transaction confirmations, not your payment details.</li>
   </ul>
 
   <h2>3. How We Use Your Data</h2>
   <ul>
-    <li>To provide and improve app features (OCR, tagging, transcription, translation)</li>
+    <li>To provide AI-powered features (tagging, OCR, transcription, translation, color analysis)</li>
     <li>To process your subscription and in-app purchases</li>
     <li>To respond to support requests</li>
     <li>To fix bugs and improve performance</li>
   </ul>
   <p>We do <strong>not</strong> sell your data. We do <strong>not</strong> use your data to train AI models.</p>
 
-  <h2>4. Third-Party Services</h2>
-  <p>Gallery Note uses the following third-party services to power certain features. Each service processes data only as needed to perform its function:</p>
+  <h2>4. AI Data Sharing &amp; User Consent</h2>
+
+  <div class="highlight">
+    Before any photo or audio content is sent to a third-party AI service for the first time, Gallery Note displays an in-app consent dialog that explains what data is sent and to whom. AI features will not run until you explicitly allow this. You can withdraw your consent at any time in <strong>Settings → Privacy &amp; Consent → Reset AI Consent</strong>.
+  </div>
+
+  <p>The following AI features involve sending your content to third-party services:</p>
   <ul>
-    <li><strong>Google Cloud Vision (OCR)</strong> — for text extraction from images</li>
-    <li><strong>Google Gemini</strong> — for AI-powered tagging and analysis</li>
-    <li><strong>Microsoft Azure</strong> — for speech-to-text transcription and translation</li>
-    <li><strong>Supabase</strong> — for secure backend data storage</li>
-    <li><strong>Render</strong> — for app server infrastructure</li>
+    <li><strong>AI Tag</strong> — photo content is sent to Google Gemini for visual analysis and tag generation.</li>
+    <li><strong>AI OCR</strong> — photo content is sent to Google Gemini or Microsoft Azure for text extraction.</li>
+    <li><strong>Speech-to-Text</strong> — audio/video content is sent to Deepgram or Google Gemini for transcription.</li>
+    <li><strong>Color Analysis</strong> — photo content is sent to our backend server for color palette extraction.</li>
   </ul>
-  <p>All third-party providers are bound by their respective privacy policies and data processing agreements. Location (EXIF) data is stripped from files before they are sent to any external service.</p>
+  <p>In all cases, data flows through our own backend server (<strong>gallerynote-backend.onrender.com</strong>) before reaching the AI service. No location, date, or personal metadata is included in the data sent to AI services.</p>
 
-  <h2>5. Audio Data</h2>
-  <p>Audio files submitted for transcription are deleted from our servers immediately after processing is complete. We do not retain audio recordings.</p>
+  <h2>5. Third-Party Services</h2>
+  <p>Gallery Note uses the following third-party services. Each service processes data only as needed to perform its function:</p>
+  <ul>
+    <li><strong>Google Gemini</strong> — for AI-powered tagging, OCR text extraction, and speech-to-text transcription. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    <li><strong>Microsoft Azure AI</strong> — for OCR text extraction and translation. <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">Microsoft Privacy Statement</a></li>
+    <li><strong>Deepgram</strong> — for speech-to-text transcription of audio and video files. <a href="https://deepgram.com/privacy" target="_blank">Deepgram Privacy Policy</a></li>
+    <li><strong>Supabase</strong> — for secure backend data storage. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a></li>
+    <li><strong>Render</strong> — for app server infrastructure. <a href="https://render.com/privacy" target="_blank">Render Privacy Policy</a></li>
+  </ul>
+  <p>All third-party providers are bound by their respective privacy policies and data processing agreements.</p>
 
-  <h2>6. Data Storage and Security</h2>
+  <h2>6. Audio Data</h2>
+  <p>Audio and video files submitted for transcription are processed in real time and deleted from our servers immediately after processing is complete. We do not retain audio or video recordings.</p>
+
+  <h2>7. Data Storage and Security</h2>
   <p>Your notes, tags, and processed results are stored securely using Supabase. We use industry-standard encryption for data in transit (HTTPS/TLS) and at rest. On-device processing is used for basic features wherever possible.</p>
 
-  <h2>7. Your Rights</h2>
+  <h2>8. Your Rights</h2>
   <p>You have full control over your data within the app:</p>
   <ul>
     <li>Delete any data at any time — EXIF, OCR results, tags, transcripts, color analysis, or any combination</li>
+    <li>Withdraw AI data-sharing consent at any time via <strong>Settings → Privacy &amp; Consent → Reset AI Consent</strong></li>
     <li>Request deletion of your account and associated data by contacting us at <a href="mailto:support@tltdata.com">support@tltdata.com</a></li>
     <li>If you are in a jurisdiction with data protection rights (such as GDPR or CCPA), you may also request access to, correction of, or portability of your personal data</li>
   </ul>
 
-  <h2>8. Children's Privacy</h2>
+  <h2>9. Children's Privacy</h2>
   <p>Gallery Note is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
 
-  <h2>9. Changes to This Policy</h2>
+  <h2>10. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
 
-  <h2>10. Contact Us</h2>
+  <h2>11. Contact Us</h2>
   <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
-  <p><strong>TLT Data</strong><br/>
-  Email: <a href="mailto:support@tltdata.com">support@tltdata.com</a></p>
+  <p><strong>TLT Data</strong><br />Email: <a href="mailto:support@tltdata.com">support@tltdata.com</a></p>
 
 </body>
 </html>
